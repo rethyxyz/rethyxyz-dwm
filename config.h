@@ -66,6 +66,8 @@ static const char *dmenumount[] = { "~/Scripts/dmenumount", NULL };
 static const char *mount_luks_usb[]  = { "st", "-e", "mount_luks_usb.sh", NULL };
 static const char *mount_usb[]  = { "st", "-e", "mount_usb.sh", NULL };
 static const char *mpcnext[]  = { "mpc", "-p", "6601", "next", NULL };
+static const char *brightup[]  = { "light", "-A", "5", NULL };
+static const char *brightdown[]  = { "light", "-U", "5", NULL };
 static const char *mpcprev[]  = { "mpc", "-p", "6601", "prev", NULL };
 static const char *mpcseekback[]  = { "mpc", "-p", "6601", "seek", "-1%", NULL };
 static const char *mpcseekfor[]  = { "mpc", "-p", "6601", "seek", "+1%", NULL };
@@ -105,14 +107,18 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioPrev,			spawn,						{.v = mpcprev } },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,						{.v = volup } },
 	{ 0, XF86XK_AudioStop,			spawn,						{.v = ncmpcpp } },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,						{.v = brightdown } },
+	{ 0, XF86XK_MonBrightnessUp,	spawn,						{.v = brightup } },
 	{ MODKEY,						XK_0,		view,			{.ui = ~0 } },
+	{ MODKEY,						XK_F1,		spawn,			{.v = volmute } },
+	{ MODKEY,						XK_F10,		spawn,			{.v = mpcprev } },
+	{ MODKEY,						XK_F11,		spawn,			{.v = mpctoggle } },
+	{ MODKEY,						XK_F12,		spawn,			{.v = mpcnext } },
 	{ MODKEY,						XK_F2,		spawn,			{.v = voldown } },
 	{ MODKEY,						XK_F3,		spawn,			{.v = volup } },
-	{ MODKEY,						XK_F4,		spawn,			{.v = volmute } },
-	{ MODKEY,						XK_F5,		spawn,			{.v = ncmpcpp } },
-	{ MODKEY,						XK_F6,		spawn,			{.v = mpcprev } },
-	{ MODKEY,						XK_F7,		spawn,			{.v = mpctoggle } },
-	{ MODKEY,						XK_F8,		spawn,			{.v = mpcnext } },
+	{ MODKEY,						XK_F5,		spawn,			{.v = brightdown } },
+	{ MODKEY,						XK_F6,		spawn,			{.v = brightup } },
+	{ MODKEY,						XK_F9,		spawn,			{.v = ncmpcpp } },
 	{ MODKEY,						XK_Return,	spawn,			{.v = termcmd } },
 	{ MODKEY,						XK_Tab,		view,			{0} },
 	{ MODKEY,						XK_b,		spawn,			{.v = browsercmd } },
@@ -156,12 +162,12 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,				XK_s,		spawn,			{.v = scratchpad } },
 	{ MODKEY|ShiftMask,				XK_space,	togglefloating,	{0} },
 	{ MODKEY|ShiftMask,				XK_t,		spawn,			{.v = todo } },
+ 	{ MODKEY|ShiftMask,             XK_0,		tag,			{.ui = ~0 } },
+ 	{ MODKEY|ShiftMask,             XK_space,	togglefloating,	{0} },
  	{ MODKEY,                       XK_0,		view,			{.ui = ~0 } },
  	{ MODKEY,                       XK_comma,	focusmon,		{.i = -1 } },
  	{ MODKEY,                       XK_m,		setlayout,		{.v = &layouts[2]} },
  	{ MODKEY,                       XK_space,	setlayout,		{0} },
- 	{ MODKEY|ShiftMask,             XK_0,		tag,			{.ui = ~0 } },
- 	{ MODKEY|ShiftMask,             XK_space,	togglefloating,	{0} },
 };
 
 /* button definitions */
