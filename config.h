@@ -134,7 +134,6 @@ static Key keys[] = {
 	{ MODKEY,						XK_m,		setlayout,		{.v = &layouts[2]} },
 	{ MODKEY,						XK_minus,	setgaps,        {.i = -1 } },
 	{ MODKEY,						XK_n,		spawn,			{.v = ncmpcpp } },
-	{ MODKEY,						XK_p,		spawn,			{.v = dmenucmd } },
 	{ MODKEY,						XK_p,		spawn,          {.v = dmenucmd } },
 	{ MODKEY,						XK_period,	spawn,			{.v = mpcseekfor } },
 	{ MODKEY,						XK_r,		spawn,			{.v = ranger } },
