@@ -6,32 +6,21 @@ My build of dwm. Minimally patched. Contains altbar, transparency, fullscreen, s
 ## Keybindings
 Window manipulation:
 - **F1**/**Super + Shift + f**: Toggle fullscreen
-
 - **F6**/**Super + Shift + q**: Kill selected frame/window
-
 - **F4**/**Super + Shift + Return**: Select window as master/Last frame/window as primary
-
 - **Super + Ctrl + h**: Resize tag -1
 - **Super + Ctrl + l**: Resize tag +1
-
 - **Super + Equal**: Increment gaps +1
 - **Super + Minus**: Increment gaps -1
-
 - **Super + Shift + equal**: Set gaps to 0
-
 - **Super + Shift + b**: Toggle status bar
-
 - **Super + Shift + c**: Kill dwm (logout)
-
 - **Super + Shift + h**: Move selected window to monitor -1
 - **Super + Shift + l**: Move selected window to monitor +1
-
 - **Super + d**: Increment master -1
 - **Super + i**: Increment master +1
-
 - **Super + j**: Focus stack +1
 - **Super + k**: Focus stack -1
-
 - **Super + l**: Goto monitor +1 (left)
 - **Super + h**: Goto monitor -1 (left)
 
@@ -39,7 +28,6 @@ Layouts:
 - **Super + f**: Set layout floating
 - **Super + m**: Set layout monocle
 - **Super + t**: Set layout tiling
-
 - **Super + space**: Toggle float/tiling layout
 
 Workspace/tag manipulation:
@@ -61,11 +49,8 @@ Music:
 - **Super + F10**/**XF86_AudioPrev**: Mpc previous song
 - **Super + F11**/**XF86_AudioPlay**: Mpc toggle pause/play song
 - **Super + F12**/**XF86_AudioNext**: Mpc next song
-
 - **Super + comma**: Mpc seek backward
 - **Super + period**: Mpc seek forward
-
-- **Super + F9**/**XF86_AudioStop**/**Super + n**: Ncmpcpp (NCurses Music Player Plus Plus)
 
 Execute programs:
 - **Super + Return** Spawn simple terminal (st)
@@ -81,5 +66,6 @@ Execute programs:
 - **Super + p**: Spawn dmenu
 - **Super + r**: Spawn ranger
 - **Super + s**: Spawn soulseek
+- **Super + F9**/**XF86_AudioStop**/**Super + n**: Spawn Ncmpcpp (NCurses Music Player Plus Plus)
 
 See `config.h` for other keybindings not included here.
