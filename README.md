@@ -5,9 +5,9 @@ My build of dwm. Minimally patched. Contains altbar, transparency, fullscreen, s
 
 ## Keybindings
 Window manipulation:
-- **F1**/**Super + Shift + f**: Toggle fullscreen
-- **F6**/**Super + Shift + q**: Kill selected frame/window
-- **F4**/**Super + Shift + Return**: Select window as master/Last frame/window as primary
+- **F1** / **Super + Shift + f**: Toggle fullscreen
+- **F6** / **Super + Shift + q**: Kill selected frame/window
+- **F4** / **Super + Shift + Return**: Select window as master/Last frame/window as primary
 - **Super + Ctrl + h**: Resize tag -1
 - **Super + Ctrl + l**: Resize tag +1
 - **Super + Equal**: Increment gaps +1
@@ -37,18 +37,18 @@ Workspace/tag manipulation:
 - **Super + XK_Tab**: Goto previous workspace/tag
 
 Volume:
-- **Super + F1**/**XF86_AudioMute**: Volume mute
-- **Super + F2**/**XF86_AudioLowerDown**: Volume down
-- **Super + F3**/**XF86_AudioRaiseUp**: Volume up
+- **Super + F1** / **XF86_AudioMute**: Volume mute
+- **Super + F2** / **XF86_AudioLowerDown**: Volume down
+- **Super + F3** / **XF86_AudioRaiseUp**: Volume up
 
 Brightness:
-- **Super + F5**/**XF86_MonBrightnessDown**: Brightness down
-- **Super + F6**/**XF86_MonBrightnessUp**: Brightness up
+- **Super + F5** / **XF86_MonBrightnessDown**: Brightness down
+- **Super + F6** / **XF86_MonBrightnessUp**: Brightness up
 
 Music:
-- **Super + F10**/**XF86_AudioPrev**: Mpc previous song
-- **Super + F11**/**XF86_AudioPlay**: Mpc toggle pause/play song
-- **Super + F12**/**XF86_AudioNext**: Mpc next song
+- **Super + F10** / **XF86_AudioPrev**: Mpc previous song
+- **Super + F11** / **XF86_AudioPlay**: Mpc toggle pause/play song
+- **Super + F12** / **XF86_AudioNext**: Mpc next song
 - **Super + comma**: Mpc seek backward
 - **Super + period**: Mpc seek forward
 
@@ -66,6 +66,6 @@ Execute programs:
 - **Super + p**: Spawn dmenu
 - **Super + r**: Spawn ranger
 - **Super + s**: Spawn soulseek
-- **Super + F9**/**XF86_AudioStop**/**Super + n**: Spawn Ncmpcpp (NCurses Music Player Plus Plus)
+- **Super + F9** / **XF86_AudioStop** / **Super + n**: Spawn Ncmpcpp (NCurses Music Player Plus Plus)
 
 See `config.h` for other keybindings not included here.
