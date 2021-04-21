@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 16;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 0;        /* 0 means bottom bar */
+static const int topbar             = 1;        /* 0 means bottom bar */
 static const int usealtbar          = 0;        /* 1 means use non-dwm status bar */
 static const char *altbarclass      = "polybar"; /* Alternate bar class name */
 static const char *altbarcmd        = "$HOME/bar.sh"; /* Alternate bar launch command */
@@ -43,6 +43,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "qutebrowser", NULL,    NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -110,8 +111,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,						8)
 	{ 0,							XK_F1,		togglefullscr,	{0} },
 	{ 0,							XK_F4,		zoom,			{0} },
-	{ 0,							XK_F5,		spawn,			{.v = helpmenu } },
 	{ 0,							XK_F6,		killclient,		{0} },
+	{ 0,							XK_F9,		spawn,			{.v = helpmenu } },
+	{ 0,							XK_F11,		focusstack,		{.i = -1 } },
+	{ 0,							XK_F12,		focusstack,		{.i = +1 } },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,						{.v = voldown } },
 	{ 0, XF86XK_AudioMute,			spawn,						{.v = volmute } },
 	{ 0, XF86XK_AudioNext,			spawn,						{.v = mpcnext } },
