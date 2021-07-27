@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 4;        /* gaps between windows */
+static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -16,7 +16,7 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_green[]       = "#00FF00";
-static const char col_cyan[]        = "#8EB8AD";
+static const char col_cyan[]        = "#4b3501";
 static const char col_purple[]      = "#800080";
 static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
@@ -41,9 +41,9 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-    { "mpv",      NULL,       NULL,       1 << 3,       1,           -1 },
+    { "mpv",      NULL,       NULL,       1 << 3,       0,           -1 },
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 7,       0,           -1 },
 	{ "qutebrowser", NULL,    NULL,       1 << 8,       0,           -1 },
 };
 
@@ -95,9 +95,9 @@ static const char *mpc_toggle[]  = { "mpc", "-p", "6601", "toggle", NULL };
 static const char *mpc_seek_backward[] = { "mpc", "-p", "6601", "seek", "-1%", NULL };
 
 /* Volume control commands. */
-static const char *vol_up[] = { "pactl", "set-sink-volume", "1", "+1%", NULL };
-static const char *vol_mute[] = { "pactl", "set-sink-mute", "1", "toggle", NULL };
-static const char *vol_down[] = { "pactl", "set-sink-volume", "1", "-1%", NULL };
+static const char *vol_up[] = { "pactl", "set-sink-volume", "0", "+1%", NULL };
+static const char *vol_mute[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
+static const char *vol_down[] = { "pactl", "set-sink-volume", "0", "-1%", NULL };
 
 static const char *picard[]  = { "picard", NULL };
 static const char *ranger[]  = { "st", "-e", "ranger", NULL };
